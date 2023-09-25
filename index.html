@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Age calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body { background-image: url(background.jpg) ; 
+      background-size: 100%;
+    }
+
+    
+     
+    
+      form{
+        margin-left: 25%;
+      }
+
+      #b {
+        padding-left: 4cm;
+      }
+      #c{
+        padding-left: 3.5cm;
+      }
+      legend{
+        margin-left: 11cm;
+        color:black;
+        font-size: 500%;
+        text-shadow:black 50%;
+        font-family: fantasy;
+        font-style: oblique;
+      }
+      input{
+        height: 15mm;
+      }
+      ::placeholder{
+        padding-left: 2cm;
+        font-style: italic;
+      }
+      #btn{
+        margin-left: 6cm;
+        background-color: rgb(26, 26, 28);
+        color: aliceblue;
+      }
+
+      fieldset{
+        border-radius: 2cm;
+        border-color: rgba(128, 255, 255, 0.3);
+        background-color: rgba(128, 255, 255, 0.3);
+      }
+      #result{
+        margin-top: 8cm;
+        font-size: 300%;
+        padding-left: 35%;
+        font-family: serif;
+      }
+      
+  </style>
+</head>
+<body>
+  <script src="script.js"></script>
+  
+  <fieldset> <legend> your birthday</legend>
+    <form action="">
+      <label for="day" id="a">day</label> 
+      <label for="month" id="b">Month</label>      <label for="year" id="c">year</label><br>  
+
+
+    <input type="text" name="day" id="d" placeholder="DD" pattern="[0-31]{2}"  required>
+    <input type="text" name="month" id="m" placeholder="MM" pattern="[0-12]{2}" title="1-12"  required>
+    <input type="text" name="year" id="y" placeholder ="YYYY" pattern="[0-9]{4}" title="4 numbers"  required> <br><br>
+    <button id ="btn" href ="#result"  onclick="years() ,days(),months(),results(),shw()" >submit</button>
+   </fieldset>
+  </form>
+  <br><br><br>
+  
+
+
+ <div id="result" hidden>
+<h2 id="last">
+  -- years <br>
+  -- months <br>
+  -- days <br>
+</h2>
+</div>
+<br><br><br><br><br><br><br><br>
+  <footer>
+  <div class="attribution">
+    Coded by <a href="#">Achraf alaoui khennoussi</a>.
+  </div>
+</footer>
+</body>
+</html>
